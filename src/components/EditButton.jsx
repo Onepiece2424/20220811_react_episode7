@@ -1,6 +1,6 @@
-import { useContenxt } from "react";
+import { useContext } from "react";
 
-import { AdminFlsgContext } from "./providers/AdminFlagProvider";
+import { AdminFlagContext } from "./providers/AdminFlagProvider";
 
 const style = {
   width: "100px",
@@ -9,7 +9,7 @@ const style = {
 };
 
 export const EditButton = () => {
-  const { isAdmin } = useContenxt(AdminFlagContext);
+  const { isAdmin } = useContext(AdminFlagContext);
 
   return (
     <button style={style} disabled={!isAdmin}>
